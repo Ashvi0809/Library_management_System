@@ -1,0 +1,36 @@
+{% extends 'myapp/base.html' %}
+
+{% block title %}Main Page{% endblock %}
+{% block myhdg %}Hello Ashvi{% endblock %}
+
+{% block body_block %}
+    {% if booklist %}
+        <h2>List of Books</h2>
+        <ol>
+            {% for book in booklist %}
+                <li>
+                    <strong>{{ book.title }}</strong>
+                    <br>
+                    {% if book.description %}
+                        <em>{{ book.description|truncatechars:100 }}</em><br>
+                    {% endif %}
+                    <a href="{% url 'myapp:detail' book.id %}">View Details </a>
+                </li>
+            {% endfor %}
+        </ol>
+        <p>Total: {{ booklist|length }} books listed</p>
+    {% else %}
+        <strong>No books available.</strong>
+    {% endif %}
+
+    <hr>
+
+    {% if publist %}
+        <h3>Top Publishers (by city)</h3>
+        <ul>
+            {% for pub in publist %}
+                <li>{{ pub.name }} – {{ pub.city }}</li>
+            {% endfor %}
+        </ul>
+    {% endif %}
+{% endblock %}

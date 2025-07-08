@@ -1,0 +1,28 @@
+body {
+    background-color: pink;
+    color: #333;
+    font-family: Arial, sans-serif;
+    font-size: 16px;
+}
+
+h1 {
+    font-size: 28px;
+    color: #655611;
+    font-style: italic;
+    text-align: center;
+}
+
+.hbar1 {
+    display: inline;
+    margin: 15px;
+}
+
+ol li {
+    margin-bottom: 10px;
+}
+h2, h3 {
+    color: #444;
+}
+em {
+    color: #555222;
+}

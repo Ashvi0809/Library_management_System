@@ -1,0 +1,7 @@
+{% extends 'myapp/base.html' %}
+
+{% block body_block %}
+    <h2>Feedback Result</h2>
+    <p>{{ choice }}</p>
+    <a href="{% url 'myapp:feedback1' %}">Submit another response</a>
+{% endblock %}

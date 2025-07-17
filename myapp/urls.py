@@ -1,10 +1,7 @@
-from django.urls import path
-from . import views1
-
-app_name = 'myapp'
+from django.contrib import admin
+from django.urls import include, path
 
 urlpatterns = [
-    path('', views1.index, name='index'),
-    path('about/', views1.about, name='about'),
-    path('<int:book_id>/', views1.detail, name='detail'),
+    path('admin/', admin.site.urls),
+    path('myapp/', include('myapp.urls1')),  # Include urls1.py here
 ]

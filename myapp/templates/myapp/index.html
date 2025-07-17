@@ -33,4 +33,11 @@
             {% endfor %}
         </ul>
     {% endif %}
+
+    <hr>
+
+    <!-- Link to Place Order page -->
+    <p>
+      <a href="{% url 'myapp:place_order' %}">Place a New Order</a>
+    </p>
 {% endblock %}
